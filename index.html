@@ -20,14 +20,35 @@
   </head>
   <body>
     <header>
-      <h1>Skill Hoisting.</h1>
+      <h1><a href="/">Skill Hoisting.</a></h1>
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#instructors">Instructors</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <span id="nav-label" hidden>Navigation</span>
+        <button
+          id="navOpenBtn"
+          class="nav-open"
+          aria-expanded="false"
+          aria-labelledby="nav-label"
+        >
+          <!-- no alt so that browser ignore img -->
+          <img src="./images/open.svg" alt="" width="28" height="27" />
+        </button>
+        <div class="nav-menu" role="dialog">
+          <button id="navCloseBtn" class="nav-close" aria-label="close">
+            <img src="./images/close.svg" alt="" width="28" height="27" />
+          </button>
+          <ul>
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#instructors">Instructors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main></main>
