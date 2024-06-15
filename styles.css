@@ -168,29 +168,30 @@ button {
   align-items: center;
   flex-direction: column;
 }
-.courses-content {
+.content {
   margin-top: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
-.courses-content > h2 {
+.content > h2 {
   font-size: 2.5rem;
   line-height: 4rem;
 }
-.courses-content > h2 > span {
+.content > h2 > span {
   color: #661eab;
 }
 
-.courses-content > p {
+.content > p {
   margin-top: 0.4rem;
   font-size: 1.3rem;
   text-align: center;
   padding: 0 0.4rem;
 }
 
-.course-cards {
+.cards {
   margin-top: 5rem;
   display: flex;
   align-items: center;
@@ -215,7 +216,8 @@ button {
   box-shadow: rgb(173, 118, 221) 2px 8px 30px;
   transition: transform ease-in-out 200ms;
 }
-.card:hover {
+.card:hover,
+.instructor-card:hover {
   transform: scale(1.05);
 }
 .card > img {
@@ -246,20 +248,87 @@ button {
   transition: all ease-in 200ms;
   cursor: pointer;
 }
-
+.card > button:hover {
+  transform: scale(1.03);
+  background-color: #5808b3;
+}
 .card > button:active {
   transform: scale(0.9);
   background-color: #5808b3;
 }
+
+#instructors {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-bottom: 10rem;
+}
+#span-instruct {
+  color: rgb(78, 228, 121);
+}
+.instructor-card {
+  color: #333;
+  background-color: #f3f7f8;
+  min-height: 12rem;
+  width: 30rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform ease-in-out 200ms;
+  cursor: pointer;
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-around;
+  width: 100%;
+  height: 35%;
+}
+.card-title > h3 {
+  line-height: 1rem;
+}
+.card-title > p {
+  font-size: 0.8rem;
+}
+#github-logo {
+  height: 2.4rem;
+}
+.card-about {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.card-avatar {
+  height: 5rem;
+  width: 5rem;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.card-avatar > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 footer {
   color: white;
   background-color: #232222;
-  height: 10vh;
+  height: 14vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@keyframes imageSlide {
+/* @keyframes imageSlide {
   0% {
     background: center no-repeat url("./images/image1.jpg");
   }
@@ -275,7 +344,7 @@ footer {
   100% {
     background: center no-repeat url("./images/image5.jpg");
   }
-}
+} */
 
 /* Media queries for screen sizes */
 /* Mobiles */
