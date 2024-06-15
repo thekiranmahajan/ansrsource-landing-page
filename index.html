@@ -37,15 +37,19 @@
             <img src="./images/close.svg" alt="" width="28" height="27" />
           </button>
           <ul>
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#courses">Courses</a>
+              <a class="nav-link" href="#home" data-scroll>Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#instructors">Instructors</a>
+              <a class="nav-link" href="#courses" data-scroll>Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#instructors" data-scroll
+                >Instructors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-scroll>Contact</a>
             </li>
           </ul>
         </div>
@@ -226,7 +230,10 @@
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Skill Hoisting. All rights reserved.</p>
+      <p>
+        &copy; <span id="currentYear"></span> Skill Hoisting. All rights
+        reserved.
+      </p>
     </footer>
   </body>
 </html>

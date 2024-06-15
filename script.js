@@ -2,6 +2,12 @@ const openBtn = document.getElementById("navOpenBtn");
 const closeBtn = document.getElementById("navCloseBtn");
 const media = window.matchMedia("(max-width: 720px)");
 const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll("[data-scroll]");
+const currentYear = document.getElementById("currentYear");
+
+// Dynamic Year
+const year = new Date().getFullYear();
+currentYear.textContent = year;
 
 // toggling the inert attribute to hide nav-menu from screen readers and keyboard enhances the accessibility
 const setupNavMenu = (e) => {
@@ -39,4 +45,12 @@ closeBtn.addEventListener("click", closeMobileMenu);
 //eventListener to detect given media query from JS
 media.addEventListener("change", (e) => {
   setupNavMenu(e);
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (media.matches) {
+      closeMobileMenu();
+    }
+  });
 });
