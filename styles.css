@@ -160,13 +160,104 @@ button {
   transform: scale(0.96);
 }
 
+#courses {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f3f7f8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.courses-content {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.courses-content > h2 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+}
+.courses-content > h2 > span {
+  color: #661eab;
+}
 
+.courses-content > p {
+  margin-top: 0.4rem;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 0.4rem;
+}
 
+.course-cards {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+.card {
+  height: 25rem;
+  width: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #661eab;
+  color: #f3f7f8;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  box-shadow: rgb(173, 118, 221) 2px 8px 30px;
+  transition: transform ease-in-out 200ms;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card > img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.card > h2 {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 0.4rem;
+}
+.card > p {
+  text-align: center;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  color: #ffffffd5;
+}
+.card > button {
+  color: #f3f7f8;
+  border: 2px solid #f3f7f8;
+  height: 2.5rem;
+  width: 10rem;
+  margin-top: auto;
+  border-radius: 0.5rem;
+  transition: all ease-in 200ms;
+  cursor: pointer;
+}
 
-
+.card > button:active {
+  transform: scale(0.9);
+  background-color: #5808b3;
+}
 footer {
   color: white;
   background-color: #232222;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @keyframes imageSlide {
   0% {
