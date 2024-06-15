@@ -9,6 +9,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: #661eab;
+  overflow-x: hidden;
 }
 
 /* Nested selection */
@@ -16,6 +17,9 @@ body {
 header {
   width: 100%;
   height: 5.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,7 +103,7 @@ button {
 
 #home {
   width: 100%;
-  height: calc(100vh - 5.5rem);
+  height: 100vh;
   display: flex;
   align-items: end;
   justify-content: center;
@@ -111,7 +115,7 @@ button {
   object-fit: cover;
   filter: brightness(0.5);
 }
-.content {
+.home-content {
   background: rgba(52, 50, 53, 0.272);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -127,16 +131,16 @@ button {
   margin-bottom: 6rem;
   transition: all ease 300ms;
 }
-.content > h2 {
+.home-content > h2 {
   color: #f3f7f8;
   font-size: 2rem;
   line-height: 2.3rem;
   margin-bottom: 0.8rem;
 }
-.content > p {
+.home-content > p {
   color: #ffffffe0;
 }
-.content > button {
+.home-content > button {
   margin-top: 3rem;
   color: #f3f7f8;
   border-radius: 0.3rem;
@@ -145,15 +149,24 @@ button {
   width: 10rem;
   border: 2px solid white;
   cursor: pointer;
-  margin-block-start:auto;
+  margin-block-start: auto;
   transition: transform ease 200ms;
 }
 
-.content > button:hover {
+.home-content > button:hover {
   background-color: #6f01ec;
 }
-.content > button:active {
+.home-content > button:active {
   transform: scale(0.96);
+}
+
+
+
+
+
+footer {
+  color: white;
+  background-color: #232222;
 }
 @keyframes imageSlide {
   0% {
@@ -212,7 +225,7 @@ button {
   #home {
     justify-content: start;
   }
-  .content {
+  .home-content {
     height: 54%;
     width: 52%;
     padding: 3rem;
@@ -230,7 +243,7 @@ button {
   #home {
     justify-content: start;
   }
-  .content {
+  .home-content {
     height: 40%;
     width: 50%;
     margin-left: 4rem;
