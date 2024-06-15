@@ -29,6 +29,14 @@ Skill Hoisting is a comprehensive and aesthetically pleasing online learning pla
 - **Responsive Navigation**: Mobile-friendly navigation menu that can be toggled open and closed.
 - **Clean and Modular Code**: Well-organized and commented JavaScript for ease of maintenance.
 
+## Preview
+![image](https://github.com/thekiranmahajan/ansrsource-landing-page/assets/91893931/d07f5669-cb65-4ff7-8b93-da12bcee5d4f)
+
+## Live Demo
+
+https://ansrsource-landing-page.vercel.app
+
+
 ## How to Run on a Local Machine
 
 1. **Clone the Repository**
