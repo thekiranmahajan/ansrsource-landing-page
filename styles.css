@@ -407,6 +407,13 @@ footer {
     margin-bottom: 4rem;
     margin-left: 4rem;
   }
+  #offerings .cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .offering-card {
+    width: 20rem;
+  }
 }
 
 /* Desktops */
@@ -422,5 +429,12 @@ footer {
     height: 40%;
     width: 50%;
     margin-left: 4rem;
+  }
+  #offerings .cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .offering-card {
+    width: 20rem;
   }
 }
