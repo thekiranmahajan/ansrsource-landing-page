@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 html {
@@ -170,6 +171,7 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 2rem;
 }
 .content {
   margin-top: 2rem;
@@ -179,11 +181,14 @@ button {
   flex-direction: column;
   text-align: center;
 }
-.content > h2 {
+.content > h2,
+#offerings > h2 {
   font-size: 2.5rem;
   line-height: 4rem;
+  text-align: center;
 }
-.content > h2 > span {
+.content > h2 > span,
+#offerings > h2 > span {
   color: #661eab;
 }
 
@@ -331,24 +336,60 @@ footer {
   align-items: center;
   justify-content: center;
 }
-/* @keyframes imageSlide {
-  0% {
-    background: center no-repeat url("./images/image1.jpg");
-  }
-  25% {
-    background: center no-repeat url("./images/image2.jpg");
-  }
-  50% {
-    background: center no-repeat url("./images/image3.jpg");
-  }
-  75% {
-    background: center no-repeat url("./images/image4.jpg");
-  }
-  100% {
-    background: center no-repeat url("./images/image5.jpg");
-  }
-} */
 
+#offerings {
+  background-color: #f3f7f8;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.offering-card {
+  height: 13rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  background-color: #661eab;
+  color: #f3f7f8;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transition: transform ease-in-out 200ms;
+  cursor: pointer;
+}
+
+.offering-cards-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.offering-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.offering-icon {
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 0.5rem;
+}
+.offering-title {
+  font-size: 1.25rem;
+}
+.offering-description {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
 /* Media queries for screen sizes */
 /* Mobiles */
 @media (max-width: 720px) {
